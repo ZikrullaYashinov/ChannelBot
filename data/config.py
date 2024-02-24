@@ -5,6 +5,7 @@ BOT_USERNAME = '@New_Dastur_bot'
 channels = ["@Zikrulla_Production"]
 
 # real
+# empty project
 
 # test
 HOST = 'vhost002.mangu-host.uz'
