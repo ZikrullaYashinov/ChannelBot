@@ -4,7 +4,7 @@ BOT_TOKEN = '7027130175:AAGuYUHZLzsHHDaeY_D17yULAB8szFk5lAM'  # Bot token real
 ADMINS = [6234035139, 1858945805]  # real
 DEVELOPERS = [6234035139]
 BOT_USERNAME = '@QuizEnglishUzbekBot'
-channels = ["@Zikrulla_Production"]
+channels = ["@Zikrulla_Production", "@inglizchaniorganamiz"]
 channelsQuiz = ["@inglizchaniorganamiz", "@QuizEnglishUzbek"]
 
 # real

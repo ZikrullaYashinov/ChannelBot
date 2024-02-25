@@ -50,12 +50,6 @@ async def callback(call: types.CallbackQuery, state: FSMContext):
     elif data == Command.sendVictorina:
         dictionaries = db.readRandomDictionaries()
         quizList = generateQuiz(dictionaries)
-        # quizList = generateQuiz([
-        #     Dictionary("apple", "olma"),
-        #     Dictionary("orange", "apelsin"),
-        #     Dictionary("banana", "banan"),
-        #     Dictionary("tomato", "pamidor"),
-        # ])
         for quiz in quizList:
             await sendQuiz(quiz)
     elif data == Command.insertDictionary:
@@ -112,13 +106,18 @@ def generateQuiz(dictionaries: list[Dictionary], isKeyToValue=True) -> list[Quiz
                 correct_option_id=correctVariant,
                 options=options
             ))
-    print(quizList)
     return quizList
 
 
-async def sendQuiz(quiz: Quiz):
-    for channel in channelsQuiz:
-        await bot.send_poll(chat_id=channel, question=quiz.question,
+async def sendQuiz(quiz: Quiz, isChannels=True, chatId: int = None):
+    if isChannels:
+        for channel in channelsQuiz:
+            await bot.send_poll(chat_id=channel, question=quiz.question,
+                                is_anonymous=True, options=quiz.options, type="quiz",
+                                correct_option_id=quiz.correct_option_id,
+                                disable_notification=True, explanation=f"{BOT_USERNAME}")
+    else:
+        await bot.send_poll(chat_id=chatId, question=quiz.question,
                             is_anonymous=True, options=quiz.options, type="quiz",
                             correct_option_id=quiz.correct_option_id,
                             disable_notification=True, explanation=f"{BOT_USERNAME}")

@@ -6,6 +6,7 @@ from aiogram.dispatcher.filters.builtin import CommandStart
 from aiogram.utils import deep_linking
 from data.config import BOT_USERNAME
 from data.models.quiz import Quiz
+from keyboards.default.home import keyboardBtnCancel
 from data.models.user import User
 from filters.filter_members import isChannelMember
 from keyboards.inline.inline_member import keyboardChannel
@@ -34,7 +35,7 @@ async def bot_start(message: types.Message):
         await showChannel(message)
     else:
         await message.answer(
-            f"Assalomu alaykum 👋", reply_markup=types.ReplyKeyboardRemove())
+            f"Assalomu alaykum 👋", reply_markup=keyboardBtnCancel)
 
     has = db.has_user(user.id)
     if not has and not message.from_user.is_bot:
@@ -45,8 +46,3 @@ async def bot_start(message: types.Message):
         oldUser = db.getUser(user.id)
         if oldUser.isBlocked:
             db.updateUser(user)
-
-
-
-
-

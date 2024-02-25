@@ -38,7 +38,7 @@ async def bot_insert_dictionaries(message: types.Message, state: FSMContext):
                 key, value = line.split('/')
                 dictionaries.append(Dictionary(key, value))
             db.insertDictionaries(dictionaries)
-            await message.answer("Tayyor")
+            await message.answer("Tayyor", reply_markup=types.ReplyKeyboardRemove())
             await state.reset_state()
         except Exception as e:
             print(e)

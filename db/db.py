@@ -233,7 +233,7 @@ class DB:
 if __name__ == "__main__":
     db = DB()
     # db.delete_table(TABLE_USERS)
-    # db.delete_table(TABLE_DICTIONARIES)
+    db.delete_table(TABLE_DICTIONARIES)
     # db.users_table()
     db.dictionaries_table()
     # print(db.readAllUsers())

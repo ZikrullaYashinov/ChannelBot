@@ -4,6 +4,9 @@ class Command:
 
     cancel = 'Orqaga'
 
+    quizEnUz = "English ~ Uzbek"
+    quizUzEn = "Uzbek ~ English"
+
     checkMember = 'checkMember'
 
     # admin
