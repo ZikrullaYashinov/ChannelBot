@@ -5,7 +5,7 @@ ADMINS = [6234035139, 1858945805]  # real
 DEVELOPERS = [6234035139]
 BOT_USERNAME = '@QuizEnglishUzbekBot'
 channels = ["@Zikrulla_Production"]
-channelsQuiz = ["@QuizEnglishUzbek"]
+channelsQuiz = ["@inglizchaniorganamiz", "@QuizEnglishUzbek"]
 
 # real
 HOST = 'vhost002.mangu-host.uz'
