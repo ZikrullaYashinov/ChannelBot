@@ -9,6 +9,9 @@ class Command:
     # admin
     statistics = 'statistics'
     sendUsers = 'sendUsers'
+    sendVictorina = 'sendVictorina'
+    insertDictionary = 'insertDictionary'
+    insertDictionaryAndSendChannel = 'insertDictionaryAndSendChannel'
 
 
 class Keys:

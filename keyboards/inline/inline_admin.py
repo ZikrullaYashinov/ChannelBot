@@ -5,6 +5,9 @@ from utils.constants import Command
 buttons = [
     ["📊 Bot statistikasi", Command.statistics],
     ["📨 Foydalanuvchilarga xabar yuborish", Command.sendUsers],
+    ["📋 Viktorina yuborish", Command.sendVictorina],
+    ["➕ Lug'at qo'shish", Command.insertDictionary],
+    ["➕ Lug'at qo'shish va kanalga yubor", Command.insertDictionaryAndSendChannel],
 ]
 inlineBtnAdminCommands = InlineKeyboardMarkup()
 for i in buttons:
